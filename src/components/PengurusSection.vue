@@ -207,9 +207,18 @@ import { siteData } from '../constants/siteData'
 }
 
 @media (max-width: 768px) {
-  .inti-grid { gap: 15px; }
-  .person-card { width: 160px; padding: 20px 15px; }
-  .avatar-container { width: 70px; height: 70px; }
-  .avatar-placeholder { font-size: 24px; }
+  .inti-grid { gap: 10px; margin-bottom: 40px; }
+  .person-card { 
+    width: calc(50% - 10px); 
+    padding: 15px 10px; 
+    border-top: 3px solid var(--accent-color);
+  }
+  .avatar-container { width: 60px; height: 60px; margin-bottom: 10px; }
+  .avatar-placeholder { font-size: 20px; }
+  .person-card h4 { font-size: 14px; text-align: center; }
+  .jabatan { font-size: 11px; padding: 3px 8px; }
+  
+  .divisi-title { font-size: 22px; margin-bottom: 20px; }
+  .divisi-grid { grid-template-columns: 1fr; gap: 15px; }
 }
 </style>

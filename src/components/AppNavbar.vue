@@ -297,8 +297,8 @@ onUnmounted(() => {
     text-align: center;
     padding: 12px 0;
     font-size: 14px;
-    color: var(--white);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--primary-color-dark);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
   
   .dropdown-menu a:last-child {
@@ -306,8 +306,8 @@ onUnmounted(() => {
   }
   
   .dropdown-menu a:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: var(--white);
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--accent-color);
   }
   
   .bar-open-1 { transform: translateY(9px) rotate(45deg); }
