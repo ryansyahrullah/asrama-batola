@@ -275,22 +275,30 @@ onUnmounted(() => {
 
   .dropdown-menu {
     position: static;
-    transform: none;
+    transform: none !important;
     box-shadow: none;
-    background: rgba(255, 255, 255, 0.05); /* Slight tint for contrast */
-    opacity: 1;
-    visibility: visible;
+    background: rgba(0, 0, 0, 0.03);
+    opacity: 0;
+    visibility: hidden;
     display: none;
     width: 100%;
     padding: 0;
     border-radius: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
   }
   
-  .dropdown-active .dropdown-menu,
+  /* Override hover for mobile, only use active class */
   .dropdown:hover .dropdown-menu {
-    display: flex;
+    display: none; /* Prevent accidental open on scroll */
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .dropdown-active .dropdown-menu {
+    display: flex !important;
     flex-direction: column;
-    transform: none;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   .dropdown-menu a {
